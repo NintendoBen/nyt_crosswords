@@ -80,8 +80,7 @@ function parseGridAcross(grid, puzzle) {
 
       const columnIndex = findWordIndex(word, rowData);
       if (columnIndex > -1) {
-        const gridIndex = columnIndex + row * puzzle.size.cols;
-        a.push(word, gridIndex);
+        a.push(word, row, columnIndex);
         break;
       }
     }
@@ -103,8 +102,7 @@ function parseGridDown(grid, puzzle) {
 
       const rowIndex = findWordIndex(word, columnData);
       if (rowIndex > -1) {
-        const gridIndex = col + rowIndex * puzzle.size.rows;
-        d.push(word, gridIndex);
+        d.push(word, rowIndex, col);
         break;
       }
     }
@@ -142,7 +140,7 @@ async function parseFile(filePath) {
 
   const a = parseGridAcross(grid, json);
   const d = parseGridDown(grid, json);
-  const s = json.size.cols;
+  const s = [json.size.rows, json.size.cols];
 
   return { a, d, s };
 }
