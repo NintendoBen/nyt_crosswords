@@ -1,0 +1,20 @@
+{
+  "name": "nyt_crosswords",
+  "version": "1.0.0",
+  "description": "Every New York Times crossword since Jan 1st, 1977, available in JSON format.",
+  "main": "index.js",
+  "scripts": {
+    "transpose": "node src/scripts/transpose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NintendoBen/nyt_crosswords.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NintendoBen/nyt_crosswords/issues"
+  },
+  "homepage": "https://github.com/NintendoBen/nyt_crosswords#readme"
+}
